@@ -31,7 +31,8 @@ const styles = {      // Use JSX Style (not dash)
   },
   textStyle: {
     fontSize: 20,
-    color: 'white'
+    color: 'white',
+    fontWeight: 'bold'
   }
 };
 
