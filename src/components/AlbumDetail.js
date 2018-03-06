@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Card from './Card';
@@ -9,10 +9,21 @@ const AlbumDetail = props => {
   return (
     <Card>
       <CardSection>
-        <Text>{props.album.title}</Text>
+        <View></View>
+        <View style={styles.headerContentStyle}>
+          <Text>{props.album.title}</Text>
+          <Text>{props.album.artist}</Text>
+        </View>
       </CardSection>
     </Card>
   );
+};
+
+const styles = {
+  headerContentStyle: {
+    flexDirection: 'column',
+    justifyContent: 'space-around'
+  }
 };
 
 AlbumDetail.propTypes = {
