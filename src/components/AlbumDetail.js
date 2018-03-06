@@ -40,10 +40,14 @@ const AlbumDetail = ({ album }) => {
       </CardSection>
       
       <CardSection>
-        <Button />
+        <Button onPress={() => console.log(title)} />
       </CardSection>
     </Card>
   );
+};
+
+AlbumDetail.propTypes = {
+  album: PropTypes.object
 };
 
 const styles = {
@@ -70,10 +74,6 @@ const styles = {
     height: 300,
     flex: 1,
   },
-};
-
-AlbumDetail.propTypes = {
-  album: PropTypes.object
 };
 
 export default AlbumDetail;
