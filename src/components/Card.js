@@ -1,21 +1,26 @@
 import React from 'react';
 import { View } from 'react-native';
+import PropTypes from 'prop-types';
 
-const Card = () => {
+const Card = (props) => {
   return (
     <View style={styles.containerStyle}>
-      
+      {props.children}
     </View>
   );
 };
+
+Card.propTypes = {
+  children: PropTypes.object,
+}
 
 const styles = {
   containerStyle: {
     borderWidth: 1,
     borderRadius: 2,
-    borderColor: 'gray',
+    borderColor: '#ddd',
     borderBottomWidth: 0,
-    shadowColor: 'white',
+    shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 2,
