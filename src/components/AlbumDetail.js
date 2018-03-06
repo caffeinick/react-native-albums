@@ -1,10 +1,11 @@
 import React from 'react';
 import { Text } from 'react-native';
-import Card from './Card';
-import CardSection from './CardSection';
 import PropTypes from 'prop-types';
 
-const AlbumDetail = (props) => {
+import Card from './Card';
+import CardSection from './CardSection';
+
+const AlbumDetail = props => {
   return (
     <Card>
       <CardSection>
@@ -15,7 +16,7 @@ const AlbumDetail = (props) => {
 };
 
 AlbumDetail.propTypes = {
-  album: PropTypes.object,
-}
+  album: PropTypes.object
+};
 
 export default AlbumDetail;
