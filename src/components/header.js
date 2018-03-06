@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 // Make a component
-const Header = (props) => {   
+const Header = props => {
   // Whenever we want to communicate from a parent component to a child compoenent we use props.
   // So props is for parent to child communication.
   const { textStyle, viewStyle } = styles;
@@ -17,10 +17,11 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  headerText: PropTypes.string,
-}
+  headerText: PropTypes.string
+};
 
-const styles = {      // Use JSX Style (not dash)
+const styles = {
+  // Use JSX Style (not dash)
   viewStyle: {
     backgroundColor: 'teal',
     justifyContent: 'center',
