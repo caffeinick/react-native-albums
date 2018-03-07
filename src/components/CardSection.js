@@ -7,7 +7,7 @@ const CardSection = props => {
 };
 
 CardSection.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
 };
 
 const styles = {

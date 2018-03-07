@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends Component {
   // State is for components internal recordkeeping that is the purpose of state.
   // We use state whenever we want to update some amount of data overtime.
-  state = { albums: [] }; // 1. define initial state
+  state = { albums: [] }; 
+  // 1. define initial state
 
   // Lifecyle method starts
   componentWillMount() {
@@ -16,7 +17,8 @@ class AlbumList extends Component {
   // loadData() {
   //   fetch('https://rallycoding.herokuapp.com/api/music_albums')
   //   .then((response) => response.json())
-  //   .then((responseData) => this.setState({ albums: responseData }))      // 2. update state by this.setState method
+  //   .then((responseData) => this.setState({ albums: responseData }))      
+  //                            // 2. update state by this.setState method
   //   .catch((e) => console.log(e))
   // }
 
@@ -39,7 +41,7 @@ class AlbumList extends Component {
   render() {
     console.log(this.state);
 
-    return <View>{this.renderAlbums()}</View>;
+    return <ScrollView>{this.renderAlbums()}</ScrollView>;
   }
 }
 
